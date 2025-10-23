@@ -1,0 +1,88 @@
+/* Estilos generales */
+:root {
+  --color-bg: #121212;
+  --color-card: #1e1e1e;
+  --color-accent: #646cff;
+  --color-text: #f0f0f0;
+  --color-subtext: #b3b3b3;
+  --color-btn: #646cff;
+  --color-btn-hover: #535bf2;
+  --border-radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--color-card);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px rgba(100, 108, 255, 0.2);
+  transition: transform var(--transition);
+}
+
+#root:hover {
+  transform: scale(1.01);
+}
+
+.logo {
+  height: 5em;
+  padding: 1em;
+  transition: transform var(--transition), filter var(--transition);
+}
+.logo:hover {
+  transform: rotate(10deg);
+  filter: drop-shadow(0 0 1.5em var(--color-accent));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5em #61dafb);
+}
+
+.card {
+  background-color: #242424;
+  border-radius: var(--border-radius);
+  padding: 1.5em;
+  margin: 1.5em 0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: background-color var(--transition);
+}
+.card:hover {
+  background-color: #2e2e2e;
+}
+
+button {
+  background-color: var(--color-btn);
+  border: none;
+  border-radius: var(--border-radius);
+  color: white;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+button:hover {
+  background-color: var(--color-btn-hover);
+  transform: translateY(-3px);
+}
+button:active {
+  transform: translateY(0);
+}
+
+.read-the-docs {
+  color: var(--color-subtext);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
